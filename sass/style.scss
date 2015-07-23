@@ -214,10 +214,10 @@ header{
 	clear: both;
 }
 .billboard, .quatest{
-	background-color: #fff;
+	background-color: #b1b1b1;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: cover;
+	// background-size: cover;
 }
 .billboard{
 	// @include transition(background 1s ease);
@@ -228,6 +228,10 @@ header{
 	}
 	>.container{
 		position: relative;
+		height: 100%;
+		>.row{
+			height: 100%;
+		}
 	}
 	.navbar{
 		border: 0;
@@ -383,6 +387,7 @@ header{
 		}
 	}
 	&.nonormalh{
+		background-size: cover;
 		h1{
 			max-width: 100%;
 			text-align: center;
@@ -510,7 +515,13 @@ header{
 	}
 	.item-info-wrap{
 		min-height: 274px;
-		position: relative;
+		position: absolute;
+		bottom: 0;
+		&+div{
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 5px;
+		}
 	}
 	.item-info{
 		background: rgba(4,35,89,0.77);
@@ -3770,6 +3781,18 @@ video{
 	}
 	.banner-block h4{
 		font-size: 15px;
+	}
+	.billboard, .quatest{
+		background-size: cover;
+	}
+	.item-info-wrap{
+		position: relative !important;
+		bottom: auto !important;
+		&+div{
+			position: relative !important;
+			bottom: auto !important;
+			margin-bottom: auto !important; 
+		}
 	}
 }
 @media(min-width: 992px){

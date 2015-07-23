@@ -601,6 +601,22 @@ $(function(){
 				$('.billboard').css({'background-image':'url('+src+')','backgroud-position':' center center'});
 			}
 		})
+		
+		if($(window).width() < 974){
+			$('.billboard').height('');
+		}
+		else{
+			$('.billboard').height($('.slide-top img').height());
+		}
+
+		$(window).resize(function(){
+			if($(window).width() < 974){
+				$('.billboard').height('');
+			}
+			else{
+				$('.billboard').height($('.slide-top img').height());
+			}
+		});
 	};
 	
 	$('.slider-nav .nav-item').click(function(){
@@ -697,6 +713,8 @@ $(function(){
 			}
 		})
 	})
+
+	
 
 });
 function getName (str){
