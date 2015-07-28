@@ -548,7 +548,7 @@
 				data = form.serialize();
 				$.ajax({
 					type: "POST",
-					url: ".",
+					url: "/catalog/aquarius/data/",
 					data: data,
 					success: function(data){
 						$("#filter-items").html(data['content']);
@@ -570,7 +570,7 @@
 				if (!form.hasClass('over')) {
 					$.ajax({
 						type: "POST",
-						url: ".",
+						url: "/catalog/aquarius/data/",
 						data: data,
 						success: function(data){
 							$("#filter-items").html(data['content']);
@@ -588,7 +588,7 @@
 			$('.shema-content[data-num=0]').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
-				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked');
+				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -599,7 +599,7 @@
 			$('.shema-content[data-num=1]').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
-				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked');
+				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -610,7 +610,7 @@
 			$('.shema-content[data-num=2]').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
-				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked');
+				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -621,7 +621,7 @@
 			$('.shema-content[data-num=3]').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
-				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked');
+				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
