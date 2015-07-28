@@ -543,8 +543,8 @@
 	<script src="js/scripts.js"></script>
 	<script>
 		$(function(){
-			$('#parametrs').find('input[type=checkbox], input[type=radio], select').change(function(){
-				var form = $(this).parents('#parametrs'),
+			function sendForm (el){
+				var form = $(el),
 				data = form.serialize();
 				$.ajax({
 					type: "POST",
@@ -559,6 +559,9 @@
 			            alert(thrownError); 
 			        } 
 				});
+			};
+			$('#parametrs').find('input[type=checkbox], input[type=radio], select').change(function(){
+				sendForm('#parametrs');
 			});
 
 			if ($('#parametrs').length > 0) {
@@ -589,7 +592,7 @@
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('300').next().find('.jq-selectbox__select-text').text('300');
-				
+				sendForm('#parametrs');
 			});
 
 			$('.shema-content[data-num=1]').click(function(e){
@@ -599,7 +602,7 @@
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('1200').next().find('.jq-selectbox__select-text').text('1200');
-				
+				sendForm('#parametrs');
 			});
 
 			$('.shema-content[data-num=2]').click(function(e){
@@ -609,7 +612,7 @@
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('300').next().find('.jq-selectbox__select-text').text('300');
-				
+				sendForm('#parametrs');
 			});
 
 			$('.shema-content[data-num=3]').click(function(e){
@@ -619,7 +622,7 @@
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('1200').next().find('.jq-selectbox__select-text').text('1200');
-				
+				sendForm('#parametrs');
 			});
 		});
 	</script>
