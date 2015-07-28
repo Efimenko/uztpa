@@ -548,7 +548,7 @@
 				data = form.serialize();
 				$.ajax({
 					type: "POST",
-					url: "/catalog/aquarius/data/",
+					url: "{% url "neon_catalog_data" %}",
 					data: data,
 					success: function(data){
 						$("#filter-items").html(data['content']);
@@ -570,7 +570,7 @@
 				if (!form.hasClass('over')) {
 					$.ajax({
 						type: "POST",
-						url: "/catalog/aquarius/data/",
+						url: "{% url "neon_catalog_data" %}",
 						data: data,
 						success: function(data){
 							$("#filter-items").html(data['content']);
