@@ -585,7 +585,7 @@
 				form.addClass('over');
 			};
 
-			$('.shema-content[data-num=0]').click(function(e){
+			$('.shema-content[data-num=0] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
 				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
@@ -596,7 +596,7 @@
 				sendForm('#parametrs');
 			});
 
-			$('.shema-content[data-num=1]').click(function(e){
+			$('.shema-content[data-num=1] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
 				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
@@ -607,7 +607,7 @@
 				sendForm('#parametrs');
 			});
 
-			$('.shema-content[data-num=2]').click(function(e){
+			$('.shema-content[data-num=2] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
 				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
@@ -618,7 +618,7 @@
 				sendForm('#parametrs');
 			});
 
-			$('.shema-content[data-num=3]').click(function(e){
+			$('.shema-content[data-num=3] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
 				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
