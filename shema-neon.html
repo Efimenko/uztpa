@@ -140,7 +140,7 @@
 										<input type="radio" id="tap-type0-4" name="tap-type">
 									  <label for="tap-type0-4"><strong>Полнопроходный</strong> с пробкой в опорах</label>
 									</div>								
-									<div class="col-sm-11 col-md-9 shema-content">
+									<div class="col-sm-11 col-md-9 shema-content" data-num="0">
 										<div class="row">											
 											<div class="col-sm-4 img">
 												<img src="img/shema-neon-img-1.png" alt="">
@@ -163,7 +163,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-11 col-md-9 shema-content">
+									<div class="col-sm-11 col-md-9 shema-content" data-num="1">
 										<div class="row">											
 											<div class="col-sm-4 img">
 												<img src="img/shema-neon-img-1.png" alt="">
@@ -186,7 +186,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-11 col-md-9 shema-content">
+									<div class="col-sm-11 col-md-9 shema-content" data-num="2">
 										<div class="row">											
 											<div class="col-sm-4 img">
 												<img src="img/shema-neon-img-1.png" alt="">
@@ -209,7 +209,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-11 col-md-9 shema-content">
+									<div class="col-sm-11 col-md-9 shema-content" data-num="3">
 										<div class="row">											
 											<div class="col-sm-4 img">
 												<img src="img/shema-neon-img-1.png" alt="">
@@ -588,7 +588,9 @@
 			$('.shema-content[data-num=0] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
-				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
+				if (!$('#tap-type1-2:checked').length) {$('#tap-type1-2').click();};
+				if (!$('#tap-type2-1:checked').length) {$('#tap-type2-1').click();};
+				if (!$('#tap-type2-2:checked').length) {$('#tap-type2-2').click();};
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -599,7 +601,9 @@
 			$('.shema-content[data-num=1] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-1').removeAttr('checked');
-				$('#tap-type1-2, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
+				if (!$('#tap-type1-2:checked').length) {$('#tap-type1-2').click();};
+				if (!$('#tap-type2-1:checked').length) {$('#tap-type2-1').click();};
+				if (!$('#tap-type2-2:checked').length) {$('#tap-type2-2').click();};
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -610,7 +614,9 @@
 			$('.shema-content[data-num=2] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
-				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
+				if (!$('#tap-type1-1:checked').length) {$('#tap-type1-1').click();};
+				if (!$('#tap-type2-1:checked').length) {$('#tap-type2-1').click();};
+				if (!$('#tap-type2-2:checked').length) {$('#tap-type2-2').click();};
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('15').next().find('.jq-selectbox__select-text').text('15');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
@@ -621,7 +627,9 @@
 			$('.shema-content[data-num=3] a').click(function(e){
 				e.preventDefault();
 				$('#tap-type1-2').removeAttr('checked');
-				$('#tap-type1-1, #tap-type2-1, #tap-type2-2').attr('checked', 'true');
+				if (!$('#tap-type1-1:checked').length) {$('#tap-type1-1').click();};
+				if (!$('#tap-type2-1:checked').length) {$('#tap-type2-1').click();};
+				if (!$('#tap-type2-2:checked').length) {$('#tap-type2-2').click();};
 				$('#diameter_from').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
 				.end().end().val('400').next().find('.jq-selectbox__select-text').text('400');
 				$('#diameter_to').removeAttr('selected').siblings('.jq-selectbox__dropdown').find('li').removeClass('sel selected')
