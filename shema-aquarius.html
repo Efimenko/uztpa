@@ -560,9 +560,9 @@
 			        } 
 				});
 			};
-			// $('#parametrs').find('input[type=checkbox], input[type=radio], select').change(function(){
-			// 	sendForm('#parametrs');
-			// });
+			$('#parametrs').find('input[type=checkbox], input[type=radio], select').click(function(){
+				sendForm('#parametrs');
+			});
 
 			if ($('#parametrs').length > 0) {
 				var form = $('#parametrs'),
